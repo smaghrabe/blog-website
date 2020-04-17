@@ -1,0 +1,229 @@
+body{
+    background-color: #444;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px;
+    grid-template-rows: 30px 50px 500px 500px 50px;
+    grid-template-areas:
+    "th th th th th th th th" 
+    "hd hd hd hd hd hd hd hd"
+    "sc sc sc sc sc sc sc sc"
+    "main main main main sd sd sd sd"
+    "ft ft ft ft ft ft ft ft";
+    grid-gap: 5px;
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+/*-------top header---------*/
+.topHeader{
+    grid-area: th;
+    background-color: #e8491d;
+    text-align: right;
+}
+
+.topHeader a{
+    text-decoration: none; 
+    color: #ffffff;
+    display: inline;
+    padding: 5px 20px 5px 20px;
+}
+
+.fa {
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  .fa:hover {
+    opacity: 0.3;
+    font-size: 20px;
+  }
+
+/*-------header---------*/
+
+.header{
+    grid-area: hd;
+    border-bottom: 3px solid #e8491d;
+    min-height: 51px;
+}
+
+.header a{
+    text-align: center;
+    text-decoration: none; 
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 20px;
+
+}
+
+
+
+.header li{
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #logo{
+    float: left;
+    margin-top: 3px;
+}
+
+header #logo h1{
+    margin: 0;
+}
+
+.header nav{
+    float: right;
+    margin-top: 10px;
+}
+
+.header .highlight{
+    font-weight: bold;
+    color: #e8491d;
+}
+/*---------------SHOWCASE-----------------*/
+
+.showcase{
+    grid-area: sc;
+    background: url('img/man-in-white-shirt-sitting-on-chair-3966781.jpg') 0 -250px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 50px;
+}
+
+.showcase h1{
+    text-align: center;
+    margin-top: 100px;
+    color: #c9c2c2;
+    font-size: 30px;
+}
+
+.showcase form{
+    text-align: center;
+}
+
+.showcase input{
+    font-size: 16px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.showcase button{
+    position: center;
+    background-color: #f1f1f1;
+    color: #000000;
+    font-size: 16px;
+    padding: 16px 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.showcase #showcase-content{
+    background: #333;
+    color: #fff;
+    border-radius: 90px;
+    padding: 0;
+    margin: 0;
+    opacity: 0.7;
+}
+/*-------------footer---------------*/
+.footer{
+    grid-area: ft;
+    background-color: #e8491d;
+    text-align: center;
+    font: bold;
+}
+
+/*-------------content--------------*/
+.content{
+    grid-area: main;
+    background-image: url(img/holidays-car-travel-adventure-21014.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+h2{
+    font: 40px bold;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.speech-bubble{
+    background-color: cornflowerblue;
+    text-align: center;
+    font: 22px bold;
+    margin: 50px;
+    position: absolute;
+    max-width: 500px;
+    min-height: 140px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    margin: 100px 0 0 400px;
+}
+
+
+.speech-bubble:after{
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 20px;
+        border-top: 20px solid black;
+        border-top-color: inherit; 
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent; 
+}
+
+/*-------------side bar---------------*/
+.sidebar {
+    grid-area: sd;
+    background-image: url(img/asphalt-environment-grass-highway-239520.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+
+  .sidebar h3{
+      font-size: 20px;
+  }
+
+
+  /*--------------media-------------------*/
+
+  @media screen and (max-width: 700px){
+    .container{
+        grid-template-areas:
+        "th" 
+        "hd"
+        "sc"
+        "sd"
+        "main"
+        "ft";
+        width: 100%;
+        height: 100%;
+    }
+  }
+
+
+  
+  
